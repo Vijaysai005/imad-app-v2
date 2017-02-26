@@ -9,9 +9,17 @@ app.use(morgan('combined'));
 var content = {
     title : 'Article-One | Vijayasai';
     date : 'Feb 26,2017';
-    heading : 'Article One'
-    content : 
-}
+    heading : 'Article One';
+    content : ` <p>
+                    This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.
+                </p>
+                <p>
+                    This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.
+                </p>
+                <p>
+                    This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.
+                </p>`;
+};
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
