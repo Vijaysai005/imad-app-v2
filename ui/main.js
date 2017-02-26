@@ -35,8 +35,7 @@ button.onclick = function(){
     request.send(null);
 };
 
-var InputName = document.getElementById("name");
-var ValueName = InputName.value;
+
 
 var submit = document.getElementById("submit_btn");
 submit.onclick = function(){
@@ -59,6 +58,8 @@ submit.onclick = function(){
         }
     };
     // make a request
+    var InputName = document.getElementById("name");
+    var ValueName = InputName.value;
     request.open('GET','http://vijaysai005.imad.hasura-app.io/submit-name?name='+ValueName, true);
     request.send(null);
 };
