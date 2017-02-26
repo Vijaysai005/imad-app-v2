@@ -6,21 +6,50 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var ArticleOne = {
-    title : 'Article-One | Vijayasai',
-    date : 'Feb 26,2017',
-    heading : 'Article One',
-    content : ` <p>
-                    This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.
-                </p>
-                <p>
-                    This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.
-                </p>
-                <p>
-                    This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.
-                </p>`
+var Articles = {
+    ArticleOne = {
+        title : 'Article-One | Vijayasai',
+        date : 'Feb 26,2017',
+        heading : 'Article One',
+        content : ` <p>
+                        This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.
+                    </p>
+                    <p>
+                        This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.
+                    </p>
+                    <p>
+                        This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.
+                    </p>`
+    },
+    ArticleTwo = {
+        title : 'Article-Two | Vijayasai',
+        date : 'Feb 25,2017',
+        heading : 'Article Two',
+        content : ` <p>
+                        This is the content of my second artile.This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.
+                    </p>
+                    <p>
+                        This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.
+                    </p>
+                    <p>
+                        This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.
+                    </p>`
+    },
+    ArticleThree = {
+        title : 'Article-Three | Vijayasai',
+        date : 'Feb 24,2017',
+        heading : 'Article Three',
+        content : ` <p>
+                        This is the content of my third artile.This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.
+                    </p>
+                    <p>
+                        This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.
+                    </p>
+                    <p>
+                        This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.This is the content of my first artile.
+                    </p>`
+    }
 };
-
 
 function createTemplate(data){
     
