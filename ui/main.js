@@ -47,18 +47,18 @@ submit.onclick = function(){
         if (request.readyState === XMLHttpRequest.DONE){
             // Take some action
             if (request.status === 200){
-                var names = ["name1", "name2", "name3", "name4"];
+                var names = request.responseText;
+                names = JSON.parse(names);
                 list = " ";
                 for (var i = 0; i < names.length; i++){
-                list += "<li>"+names[i]+"</li>";
-    }
-    var ul = document.getElementById("namelist");
-    ul.innerHTML = list;
+                    list += "<li>"+names[i]+"</li>";
+                }
+                var ul = document.getElementById("namelist");
+                ul.innerHTML = list;
             }
         }
     };
     // make a request
     request.open('GET','http://vijaysai005.imad.hasura-app.io/submit-name?name='+ValueName, true);
     request.send(null);
-
 };
